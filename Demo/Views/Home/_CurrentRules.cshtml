@@ -1,0 +1,28 @@
+﻿@model IEnumerable<JORB.Rule>
+@{
+}
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Rule Code</th>
+            <th>Rule Group Name</th>
+            <th>Rule Source</th>
+            <th>Manage</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var rule in Model)
+        {
+            <tr>
+                <td>@rule.RuleCode</td>
+                <td>@rule.Group.GroupName</td>
+                <td>@rule.Source</td>
+                <td>
+                    <span class="glyphicon glyphicon-remove remove-rule-button" data-post-url="@Url.Action("DeleteRule","Home")" data-rule-name="@rule.RuleCode"></span>
+                    <span class="glyphicon glyphicon-edit edit-rule-button"></span>
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>

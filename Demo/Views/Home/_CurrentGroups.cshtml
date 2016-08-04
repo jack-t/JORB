@@ -1,0 +1,25 @@
+﻿@model System.Collections.Generic.IEnumerable<JORB.RuleGroup>
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Group Name</th>
+            <th>Parameters</th>
+            <th>Manage</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var ruleGroup in Model)
+        {
+            <tr>
+                <td>@ruleGroup.GroupName</td>
+                <td>
+                    @(string.IsNullOrWhiteSpace(ruleGroup.RenderedParameters) ? "[None]" : ruleGroup.RenderedParameters)
+                </td>
+                <td>
+                    <span class="glyphicon glyphicon-remove remove-group-button" data-post-url="@Url.Action("DeleteGroup", "Home")" data-group-name="@ruleGroup.GroupName"></span>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

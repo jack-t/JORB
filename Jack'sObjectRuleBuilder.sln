@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JORB", "JORB\JORB.csproj", "{A6CE7B13-D2B1-4D8E-BB8A-7B0BAAE0496A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JORB.Tests", "JORB.Tests\JORB.Tests.csproj", "{F8E011D7-EE88-4D9F-9C41-C61331FCA32F}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Demo", "Demo\Demo.xproj", "{D5C3524D-CEC8-46DC-8FF7-EAB2663056C2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A6CE7B13-D2B1-4D8E-BB8A-7B0BAAE0496A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6CE7B13-D2B1-4D8E-BB8A-7B0BAAE0496A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6CE7B13-D2B1-4D8E-BB8A-7B0BAAE0496A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6CE7B13-D2B1-4D8E-BB8A-7B0BAAE0496A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8E011D7-EE88-4D9F-9C41-C61331FCA32F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8E011D7-EE88-4D9F-9C41-C61331FCA32F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8E011D7-EE88-4D9F-9C41-C61331FCA32F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8E011D7-EE88-4D9F-9C41-C61331FCA32F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5C3524D-CEC8-46DC-8FF7-EAB2663056C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5C3524D-CEC8-46DC-8FF7-EAB2663056C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5C3524D-CEC8-46DC-8FF7-EAB2663056C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5C3524D-CEC8-46DC-8FF7-EAB2663056C2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://tsitfs:8080/tfs/tsi%20technology
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = JORB.Tests\\JORB.Tests.csproj
+		SccProjectName1 = JORB.Tests
+		SccLocalPath1 = JORB.Tests
+		SccProjectUniqueName2 = JORB\\JORB.csproj
+		SccProjectName2 = JORB
+		SccLocalPath2 = JORB
+		SccProjectUniqueName3 = Demo\\Demo.xproj
+		SccProjectName3 = Demo
+		SccLocalPath3 = Demo
+	EndGlobalSection
+EndGlobal

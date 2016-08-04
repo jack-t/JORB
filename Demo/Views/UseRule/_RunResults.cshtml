@@ -1,0 +1,31 @@
+﻿@model IEnumerable<JORB.RuleExecutionResult>
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Rule Name</th>
+            <th>Result</th>
+        </tr>
+    </thead>
+
+    @foreach (var res in Model)
+    {
+        <tr>
+            <td>
+                @res.RuleName
+            </td>
+            <td>
+                @if (res.HasResult)
+                {
+                    <span class="glyphicon @(res.Result ? "glyphicon-ok-sign rule-green" : "glyphicon-remove-sign rule-red")"></span>
+                }
+                else
+                {
+                    <span class="glyphicon glyphicon-bullhorn "></span>
+                    <span class="glyphicon glyphicon-fire rule-fire"></span>
+                    <span class="glyphicon glyphicon-exclamation-sign "></span>
+                }
+            </td>
+        </tr>
+    }
+</table>

@@ -1,0 +1,42 @@
+﻿<div>
+    <h2>Run Rules</h2>
+    <form id="run-submit" target="@Url.Action("Run", "UseRule")">
+        <div class="form-group ">
+            <label for="runRules_GroupCode" class="control-label">Group Code</label>
+            <input type="text" id="runRules_GroupCode" class="form-control" placeholder="Rule Group Code"/>
+        </div>
+        <label class="control-label">
+            Parameters
+            <span class="glyphicon glyphicon-plus-sign run-parameters-append"></span>
+        </label>
+        <div class="row">
+            <div class="form-group col-md-4">
+                <table class="table table-bordered table-hover" id="runRules_Parameters">
+                    <thead>
+                    <tr>
+                        <th>Parameter Value</th>
+                        <th>Remove</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Run" class="btn btn-primary run-submit"/>
+        </div>
+    </form>
+    <div id="rule_results">
+
+    </div>
+</div>
+<!--This is a table to make sure the browser doesn't change it into non-row stuff on copy-->
+<table class="hidden" id="parameter_model">
+    <tr class="parameter">
+        <td>
+            <input type="text" class="parameter-value"/>
+        </td>
+        <td>
+            <span class="parameter-remove glyphicon glyphicon-remove"></span>
+        </td>
+    </tr>
+</table>

@@ -1,0 +1,80 @@
+﻿@model Demo.Models.ViewModels.HomeIndexViewModel
+@{
+    ViewData["Title"] = "Rules";
+}
+<div class="row">
+    <div class="col-md-6">
+        <h2>Create a rule</h2>
+        <form id="create_rule" target="@Url.Action("CreateRule", "Home")">
+            <div class="form-group">
+                <label for="createRule_RuleCode">Rule Code</label>
+                <input id="createRule_RuleCode" class="form-control" placeholder="Rule Code" type="text"/>
+            </div>
+            <div class="form-group">
+                <label for="createRule_GroupCode">Rule Group Code</label>
+                <input id="createRule_GroupCode" class="form-control" placeholder="Rule Group Code" type="text"/>
+            </div>
+            <div class="form-group">
+                <label for="createRule_Source">Source</label>
+                <textarea rows="8" placeholder="Source" id="createRule_Source" class="form-control"></textarea>
+            </div>
+            <input type="submit" class="create-rule-submit btn btn-primary" value="Create"/>
+        </form>
+    </div>
+
+    <div class="col-md-6">
+        <h2>Create a group</h2>
+        <form id="create_group" target="@Url.Action("CreateGroup", "Home")">
+            <div class="form-group">
+                <label for="createGroup_GroupName">Group Name</label>
+                <input id="createGroup_GroupName" class="form-control" placeholder="Group Name" type="text"/>
+            </div>
+            <div class="form-group">
+                <label for="createGroup_Parameters">Parameters <span class="glyphicon glyphicon-plus-sign group-parameters-append"></span></label>
+                <table id="createGroup_Parameters" class="table table-bordered table-hover">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Fully-qualified Type</th>
+                        <th>Manage</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+
+                <table id="createGroup_ParameterModel" class="hidden">
+                    <tr class="group-parameter">
+                        <td>
+                            <input type="text" class="group-parameter-name"/>
+                        </td>
+                        <td>
+                            <input type="text" class="group-parameter-type"/>
+                        </td>
+                        <td>
+                            <span class="parameter-remove glyphicon glyphicon-remove"></span>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+            <input type="submit" class="create-group-submit btn btn-primary" value="Create"/>
+        </form>
+
+
+
+    </div>
+</div>
+<div class="row">
+    <h2>Manage rules <span class="glyphicon glyphicon-refresh rules-refresh" data-get-url="@Url.Action("CurrentRules", "Home")"></span></h2>
+    <div id="rules_container">
+        @await Html.PartialAsync("_CurrentRules", Model.CurrentRules)
+    </div>
+</div>
+<div class="row">
+    <h2>Manage groups <span class="glyphicon glyphicon-refresh groups-refresh" data-get-url="@Url.Action("CurrentGroups", "Home")"></span></h2>
+    <div id="groups_container">
+        @await Html.PartialAsync("_CurrentGroups", Model.CurrentGroups)
+    </div>
+</div>
